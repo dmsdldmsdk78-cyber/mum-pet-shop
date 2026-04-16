@@ -169,12 +169,14 @@
                 </div>
 
                 <div class="product-tabs" role="tablist" aria-label="상품 카테고리">
-                    <button class="tab-btn is-active" type="button" role="tab" aria-selected="true"
-                        data-tab="recommend">MD추천</button>
-                    <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="best">베스트</button>
-                    <button class="tab-btn" type="button" role="tab" aria-selected="false"
-                        data-tab="living">홈리빙</button>
-                    <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="walk">산책</button>
+                    <button id="tab-recommend" class="tab-btn is-active" type="button" role="tab" aria-selected="true"
+                        aria-controls="panel-recommend" data-tab="recommend">MD추천</button>
+                    <button id="tab-best" class="tab-btn" type="button" role="tab" aria-selected="false"
+                        aria-controls="panel-best" data-tab="best">베스트</button>
+                    <button id="tab-living" class="tab-btn" type="button" role="tab" aria-selected="false"
+                        aria-controls="panel-living" data-tab="living">홈리빙</button>
+                    <button id="tab-walk" class="tab-btn" type="button" role="tab" aria-selected="false"
+                        aria-controls="panel-walk" data-tab="walk">산책</button>
                 </div>
 
                 <div class="product-panel is-active" data-panel="recommend">
