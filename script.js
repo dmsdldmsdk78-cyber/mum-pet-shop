@@ -112,67 +112,130 @@ tabButtons.forEach((button) => {
   });
 });
 
+// 큐레이션 섹션 전체 영역 선택
 const curationSection = document.querySelector("#curationSection");
+
+// 실제 가로로 움직일 카드 묶음 선택
 const curationGrid = document.querySelector("#curationGrid");
 
+// 섹션과 카드 묶음이 둘 다 있을 때만 실행
 if (curationSection && curationGrid) {
+  // 현재 가로로 이동한 거리
   let currentX = 0;
+
+  // 최대로 이동할 수 있는 거리
   let maxX = 0;
+
+  // 현재 화면이 데스크탑인지 확인
+  // 768px 초과면 데스크탑으로 간주
   let isDesktop = window.innerWidth > 768;
 
+  // 현재 화면 크기 기준으로
+  // 큐레이션 카드들이 얼마나 더 가로로 이동할 수 있는지 계산
   function updateCurationRange() {
+    // 화면에 보이는 영역(뷰포트) 선택
     const viewport = curationSection.querySelector(".curation-viewport");
+
+    // 없으면 함수 종료
     if (!viewport) return;
+
+    // 전체 카드 너비 - 현재 보이는 영역 너비
+    // 즉, 오른쪽으로 더 밀 수 있는 최대 거리
     maxX = Math.max(0, curationGrid.scrollWidth - viewport.clientWidth);
   }
 
+  // 가로 이동값을 실제로 적용하는 함수
   function setCurationX(value) {
+    // 0보다 작아지지 않게, maxX보다 커지지 않게 제한
     currentX = Math.max(0, Math.min(value, maxX));
+
+    // translateX로 카드들을 왼쪽으로 이동
+    // 값이 커질수록 더 많이 넘어감
     curationGrid.style.transform = `translateX(-${currentX}px)`;
   }
 
+  // 현재 큐레이션 섹션이 화면 안에 어느 정도 보이는지 확인
   function isCurationVisible() {
+    // 현재 섹션의 위치 정보 가져오기
     const rect = curationSection.getBoundingClientRect();
+
+    // 섹션의 윗부분이 화면 아래쪽 80% 안에 들어오고
+    // 섹션의 아랫부분이 화면 위쪽 20% 아래에 있으면
+    // "지금 보고 있는 중"이라고 판단
     return rect.top < window.innerHeight * 0.8 && rect.bottom > window.innerHeight * 0.2;
   }
 
+  // 마우스 휠로 큐레이션을 가로 이동시키는 함수
   function handleCurationWheel(event) {
+    // 모바일이면 실행하지 않음
     if (!isDesktop) return;
+
+    // 지금 큐레이션 섹션이 화면에 안 보이면 실행하지 않음
     if (!isCurationVisible()) return;
 
+    // 현재 화면 크기에 맞게 최대 이동 거리 다시 계산
     updateCurationRange();
 
+    // 더 이상 움직일 공간이 없으면 종료
     if (maxX <= 0) return;
 
+    // 휠을 아래로 내리는지 확인
     const movingDown = event.deltaY > 0;
+
+    // 휠을 위로 올리는지 확인
     const movingUp = event.deltaY < 0;
+
+    // 현재 맨 처음 위치인지 확인
     const atStart = currentX <= 0;
+
+    // 현재 맨 끝 위치인지 확인
     const atEnd = currentX >= maxX;
 
+    // 아래로 휠을 내렸고, 아직 끝에 도달하지 않았다면
     if (movingDown && !atEnd) {
+      // 기본 세로 스크롤을 막고
       event.preventDefault();
+
+      // deltaY 값만큼 가로로 더 이동
       setCurationX(currentX + Math.abs(event.deltaY));
     }
 
+    // 위로 휠을 올렸고, 아직 시작점이 아니라면
     if (movingUp && !atStart) {
+      // 기본 세로 스크롤을 막고
       event.preventDefault();
+
+      // deltaY 값만큼 가로로 반대로 이동
       setCurationX(currentX - Math.abs(event.deltaY));
     }
   }
 
+  // 윈도우 전체에 휠 이벤트 등록
+  // passive: false 여야 preventDefault 사용 가능
   window.addEventListener("wheel", handleCurationWheel, { passive: false });
 
+  // 화면 크기가 바뀔 때 실행
   window.addEventListener("resize", () => {
+    // 현재가 데스크탑인지 다시 판별
     isDesktop = window.innerWidth > 768;
+
+    // 최대 이동 거리 다시 계산
     updateCurationRange();
 
+    // 모바일로 바뀌면
     if (!isDesktop) {
+      // 이동값 초기화
       currentX = 0;
+
+      // CSS transform 제거
+      // 모바일에서는 손가락 스와이프용 overflow-x 방식 사용
       curationGrid.style.transform = "none";
     } else {
+      // 다시 데스크탑이 되면 현재 위치 기준으로 transform 재적용
       setCurationX(currentX);
     }
   });
 
+  // 처음 실행 시 최대 이동 거리 계산
   updateCurationRange();
 }

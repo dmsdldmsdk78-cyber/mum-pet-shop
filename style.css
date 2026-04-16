@@ -532,7 +532,7 @@ dt {
     padding: 88px 0;
 }
 
-.review-section > .inner > p:first-child {
+.review-section>.inner>p:first-child {
     margin-bottom: 10px;
     font-size: 13px;
     letter-spacing: 0.16em;
@@ -640,7 +640,7 @@ dt {
     margin-bottom: 18px;
 }
 
-.promo-copy > p {
+.promo-copy>p {
     color: var(--muted);
     margin-bottom: 28px;
 }
@@ -837,14 +837,14 @@ dt {
 
     .nav-row {
         min-height: 56px;
-        grid-template-columns: 1fr auto;
-        gap: 12px;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
     }
 
     .main-nav {
-        grid-column: 1 / 2;
-        justify-self: start;
-        width: 100%;
+        grid-column: 2;
+        justify-self: center;
+        max-width: 100%;
         overflow-x: auto;
         scrollbar-width: none;
     }
@@ -857,7 +857,7 @@ dt {
         gap: 20px;
         width: max-content;
         white-space: nowrap;
-        padding-right: 12px;
+        margin: 0 auto;
     }
 
     .nav-list a {
@@ -866,7 +866,7 @@ dt {
     }
 
     .header-icons {
-        grid-column: 2 / 3;
+        grid-column: 3;
         justify-self: end;
         gap: 6px;
     }
@@ -911,7 +911,7 @@ dt {
     }
 
     .hero-image-slide img {
-        height: 320px;
+        height: 280px;
     }
 
     .hero-actions {
@@ -1034,14 +1034,17 @@ dt {
         font-size: 13px;
     }
 
+    /* 한칸으로 만들기 */
     .promo-inner {
         grid-template-columns: 1fr;
     }
 
+    /* 이미지를위로 1번째 */
     .promo-image {
         order: 1;
     }
 
+    /* 이미지를위로 2번째 */
     .promo-copy {
         order: 2;
         padding: 28px 22px 30px;
@@ -1052,7 +1055,7 @@ dt {
         line-height: 1.08;
     }
 
-    .promo-copy > p {
+    .promo-copy>p {
         font-size: 14px;
         margin-bottom: 20px;
     }
@@ -1063,7 +1066,7 @@ dt {
     }
 
     .promo-image img {
-        height: 360px;
+        height: 300px;
     }
 
     .site-footer {
@@ -1148,11 +1151,11 @@ dt {
     }
 
     .section {
-        padding: 56px 0;
+        padding: 52px 0;
     }
 
     .section-heading h2 {
-        font-size: 30px;
+        font-size: 29px;
     }
 
     .curation-card {
