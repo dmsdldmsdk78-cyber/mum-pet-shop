@@ -118,9 +118,11 @@ const curationGrid = document.querySelector("#curationGrid");
 if (curationSection && curationGrid) {
   let currentX = 0;
   let maxX = 0;
+  let isDesktop = window.innerWidth > 768;
 
   function updateCurationRange() {
     const viewport = curationSection.querySelector(".curation-viewport");
+    if (!viewport) return;
     maxX = Math.max(0, curationGrid.scrollWidth - viewport.clientWidth);
   }
 
@@ -135,6 +137,7 @@ if (curationSection && curationGrid) {
   }
 
   function handleCurationWheel(event) {
+    if (!isDesktop) return;
     if (!isCurationVisible()) return;
 
     updateCurationRange();
@@ -160,8 +163,15 @@ if (curationSection && curationGrid) {
   window.addEventListener("wheel", handleCurationWheel, { passive: false });
 
   window.addEventListener("resize", () => {
+    isDesktop = window.innerWidth > 768;
     updateCurationRange();
-    setCurationX(currentX);
+
+    if (!isDesktop) {
+      currentX = 0;
+      curationGrid.style.transform = "none";
+    } else {
+      setCurationX(currentX);
+    }
   });
 
   updateCurationRange();
