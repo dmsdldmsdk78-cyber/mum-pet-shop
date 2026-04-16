@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUM Shop</title>
+    <meta name="description" content="반려동물과 함께하는 감성 라이프스타일 셀렉트숍">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Cormorant+Garamond:wght@500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/top.png">
+</head>
+
+<body>
+    <a class="skip-link" href="#main">본문 바로가기</a>
+
+    <div class="top-banner">
+        <div class="inner top-banner-inner">
+            <p>신규 회원 3,000원 쿠폰 증정 · 반려동물과 함께하는 다정한 일상</p>
+            <button class="top-banner-close" type="button" aria-label="상단 배너 닫기">×</button>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="utility-bar inner">
+            <div class="utility-left">
+                <a href="#">관심상품 0개</a>
+                <a href="#">좋아요 0개</a>
+            </div>
+            <div class="utility-right">
+                <a href="#">회원가입</a>
+                <a href="#">로그인</a>
+                <a href="#">주문조회</a>
+                <a href="#">최근본상품</a>
+                <a href="#">고객센터</a>
+            </div>
+        </div>
+
+        <div class="branding inner">
+            <p class="brand-subtitle">Pet & Living</p>
+            <h1 class="brand-title">mum shop</h1>
+        </div>
+
+        <div class="nav-row inner">
+            <nav class="main-nav" aria-label="주요 메뉴">
+                <ul class="nav-list">
+                    <li><a href="#">사료</a></li>
+                    <li><a href="#">장난감</a></li>
+                    <li><a href="#">산책</a></li>
+                    <li><a href="#">케어</a></li>
+                    <li><a href="#">리빙</a></li>
+                    <li><a href="#">의류</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-icons">
+                <button type="button" aria-label="검색">
+                    <img src="./img/MagnifyingGlass.png" alt="검색">
+                </button>
+                <button type="button" aria-label="마이페이지">
+                    <img src="./img/User.png" alt="마이페이지">
+                </button>
+                <button type="button" aria-label="장바구니">
+                    <img src="./img/Handbag.png" alt="장바구니">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero">
+            <div class="inner hero-box-inner">
+                <div class="hero-text">
+                    <p class="hero-eyebrow">Daily Pet Styling</p>
+                    <h2>감성적인 공간과<br>펫 라이프의 조화</h2>
+                    <p>차분하고 정돈된 펫 라이프 무드</p>
+
+                    <div class="hero-actions">
+                        <a href="#" class="btn btn-primary">Best Items</a>
+                        <a href="#" class="btn btn-outline-dark">Brand Story</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-image-slider">
+                        <div class="hero-image-track">
+                            <div class="hero-image-slide is-active">
+                                <img src="img/hero3.jpg" alt="메인 이미지 1">
+                            </div>
+                            <div class="hero-image-slide">
+                                <img src="img/hero2.jpg" alt="메인 이미지 2">
+                            </div>
+                            <div class="hero-image-slide">
+                                <img src="img/hero1.jpg" alt="메인 이미지 3">
+                            </div>
+                        </div>
+
+                        <div class="hero-image-dots">
+                            <button class="hero-image-dot is-active" type="button" data-hero-slide="0"
+                                aria-label="첫 번째 이미지"></button>
+                            <button class="hero-image-dot" type="button" data-hero-slide="1"
+                                aria-label="두 번째 이미지"></button>
+                            <button class="hero-image-dot" type="button" data-hero-slide="2"
+                                aria-label="세 번째 이미지"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="curation section" id="curationSection">
+            <div class="inner">
+                <div class="section-heading">
+                    <h2>베스트 신상 아이템 모음</h2>
+                    <p>반응이 좋은 아이템을 모아서 재출시</p>
+                </div>
+
+                <div class="curation-viewport">
+                    <div class="curation-grid" id="curationGrid">
+                        <article class="curation-card">
+                            <img src="img/card1.jpg" alt="이미지1">
+                            <div class="curation-card-body">
+                                <h3>Walk Essentials</h3>
+                                <p>매일의 산책을 위한 가볍고 실용적인 아이템</p>
+                                <a href="#">자세히 살펴보기</a>
+                            </div>
+                        </article>
+
+                        <article class="curation-card">
+                            <img src="img/card3.jpg" alt="이미지2">
+                            <div class="curation-card-body">
+                                <h3>Pet Living</h3>
+                                <p>집 안에서도 편안한 시간을 위한 리빙 셀렉션</p>
+                                <a href="#">자세히 살펴보기</a>
+                            </div>
+                        </article>
+
+                        <article class="curation-card">
+                            <img src="img/card2.jpg" alt="이미지3">
+                            <div class="curation-card-body">
+                                <h3>Gentle Care</h3>
+                                <p>매일의 케어를 더 부드럽게 도와주는 아이템</p>
+                                <a href="#">자세히 살펴보기</a>
+                            </div>
+                        </article>
+
+                        <article class="curation-card">
+                            <img src="img/card4.jpg" alt="이미지4">
+                            <div class="curation-card-body">
+                                <h3>Pet food</h3>
+                                <p>한개는 아쉬워 두개 주세요</p>
+                                <a href="#">자세히 살펴보기</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products section">
+            <div class="inner">
+                <div class="section-heading">
+                    <h2>펫스타일링</h2>
+                    <p>가구몰처럼 정돈된 무드로 담아낸 펫 라이프 아이템</p>
+                </div>
+
+                <div class="product-tabs" role="tablist" aria-label="상품 카테고리">
+                    <button class="tab-btn is-active" type="button" role="tab" aria-selected="true"
+                        data-tab="recommend">MD추천</button>
+                    <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="best">베스트</button>
+                    <button class="tab-btn" type="button" role="tab" aria-selected="false"
+                        data-tab="living">홈리빙</button>
+                    <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="walk">산책</button>
+                </div>
+
+                <div class="product-panel is-active" data-panel="recommend">
+                    <div class="product-grid">
+                        <article class="product-card">
+                            <a href="#">
+                                <img src="img/1.jpg" alt="부드러운 쿠션형 펫베드">
+                                <div class="product-info">
+                                    <h3>위니 소프트 쿠션 베드</h3>
+                                    <p class="price">79,000원</p>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="product-card">
+                            <a href="#">
+                                <img src="img/2.jpg" alt="감성 펫 체어">
+                                <div class="product-info">
+                                    <h3>위니 라운드 펫 체어</h3>
+                                    <p class="price">132,000원</p>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="product-card">
+                            <a href="#">
+                                <img src="img/3.jpg" alt="우드 펫 수납장">
+                                <div class="product-info">
+                                    <h3>내추럴 우드 펫 수납장</h3>
+                                    <p class="price">189,000원</p>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="product-card">
+                            <a href="#">
+                                <img src="img/4.jpg" alt="식기와 보관함">
+                                <div class="product-info">
+                                    <h3>데일리 피딩 보관함</h3>
+                                    <p class="price">58,000원</p>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="product-card">
+                            <a href="#">
+                                <img src="img/5.jpg" alt="펫 리빙 오브제">
+                                <div class="product-info">
+                                    <h3>세이지 펫 리빙 매트</h3>
+                                    <p class="price">43,000원</p>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="product-card">
+                            <a href="#">
+                                <img src="img/6.jpg" alt="펫 수납 선반">
+                                <div class="product-info">
+                                    <h3>위니 수납 선반 세트</h3>
+                                    <p class="price">98,000원</p>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="product-card">
+                            <a href="#">
+                                <img src="img/7.jpg" alt="펫 드레서 수납장">
+                                <div class="product-info">
+                                    <h3>오크 펫 드레서</h3>
+                                    <p class="price">215,000원</p>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="product-card">
+                            <a href="#">
+                                <img src="img/8.jpg" alt="패브릭 펫 장식장">
+                                <div class="product-info">
+                                    <h3>패브릭 펫 장식장</h3>
+                                    <p class="price">164,000원</p>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="product-panel" data-panel="best">
+                    <div class="product-grid">
+                        <article class="product-card"><a href="#"><img src="img/5.jpg" alt="베스트 상품 1">
+                                <div class="product-info">
+                                    <h3>베스트 우드 보관함</h3>
+                                    <p class="price">149,000원</p>
+                                </div>
+                            </a></article>
+                        <article class="product-card"><a href="#"><img src="img/8.jpg" alt="베스트 상품 2">
+                                <div class="product-info">
+                                    <h3>베스트 펫베드</h3>
+                                    <p class="price">79,000원</p>
+                                </div>
+                            </a></article>
+                        <article class="product-card"><a href="#"><img src="img/4.jpg" alt="베스트 상품 3">
+                                <div class="product-info">
+                                    <h3>베스트 피딩 박스</h3>
+                                    <p class="price">58,000원</p>
+                                </div>
+                            </a></article>
+                        <article class="product-card"><a href="#"><img src="img/9.jpg" alt="베스트 상품 4">
+                                <div class="product-info">
+                                    <h3>베스트 장식 수납장</h3>
+                                    <p class="price">164,000원</p>
+                                </div>
+                            </a></article>
+                    </div>
+                </div>
+
+                <div class="product-panel" data-panel="living">
+                    <div class="product-grid">
+                        <article class="product-card"><a href="#"><img src="img/9.jpg" alt="홈리빙 상품 1">
+                                <div class="product-info">
+                                    <h3>펫 리빙 러그</h3>
+                                    <p class="price">39,000원</p>
+                                </div>
+                            </a></article>
+                        <article class="product-card"><a href="#"><img src="img/4.jpg" alt="홈리빙 상품 2">
+                                <div class="product-info">
+                                    <h3>데일리 리빙 선반</h3>
+                                    <p class="price">98,000원</p>
+                                </div>
+                            </a></article>
+                        <article class="product-card"><a href="#"><img src="img/3.jpg" alt="홈리빙 상품 3">
+                                <div class="product-info">
+                                    <h3>오크 펫 수납장</h3>
+                                    <p class="price">215,000원</p>
+                                </div>
+                            </a></article>
+                        <article class="product-card"><a href="#"><img src="img/1.jpg" alt="홈리빙 상품 4">
+                                <div class="product-info">
+                                    <h3>리빙 라운지 체어</h3>
+                                    <p class="price">132,000원</p>
+                                </div>
+                            </a></article>
+                    </div>
+                </div>
+
+                <div class="product-panel" data-panel="walk">
+                    <div class="product-grid">
+                        <article class="product-card"><a href="#"><img src="img/9.jpg" alt="산책 상품 1">
+                                <div class="product-info">
+                                    <h3>산책 키트 보관함</h3>
+                                    <p class="price">58,000원</p>
+                                </div>
+                            </a></article>
+                        <article class="product-card"><a href="#"><img src="img/6.jpg" alt="산책 상품 2">
+                                <div class="product-info">
+                                    <h3>소프트 이동 쿠션</h3>
+                                    <p class="price">79,000원</p>
+                                </div>
+                            </a></article>
+                        <article class="product-card"><a href="#"><img src="img/3.jpg" alt="산책 상품 3">
+                                <div class="product-info">
+                                    <h3>외출 준비 수납장</h3>
+                                    <p class="price">189,000원</p>
+                                </div>
+                            </a></article>
+                        <article class="product-card"><a href="#"><img src="img/7.jpg" alt="산책 상품 4">
+                                <div class="product-info">
+                                    <h3>워크 리빙 매트</h3>
+                                    <p class="price">43,000원</p>
+                                </div>
+                            </a></article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="review-section section">
+            <div class="inner">
+                <p class="review-label">REVIEW</p>
+                <div class="review-heading">
+                    <h2>고객들이 남긴 실제 사용 후기</h2>
+                </div>
+
+                <div class="review-grid">
+                    <article class="review-card">
+                        <h3>포장도 깔끔하고 상품 퀄리티가 좋아요.</h3>
+                        <p>
+                            산책 하네스가 생각보다 튼튼해서 데일리로 쓰기 좋았어요.
+                            디자인도 과하지 않아서 집 분위기랑 잘 어울립니다.
+                        </p>
+                        <div class="review-meta">
+                            <span class="review-category">산책용품</span>
+                            <span class="review-name">김*영 보호자</span>
+                        </div>
+                    </article>
+
+                    <article class="review-card">
+                        <h3>반려묘 식기가 인테리어랑 잘 어울려요.</h3>
+                        <p>
+                            집 분위기 해치지 않고 깔끔해서 만족스러웠습니다.
+                            생각보다 마감도 좋아서 재구매 의사 있어요.
+                        </p>
+                        <div class="review-meta">
+                            <span class="review-category">리빙</span>
+                            <span class="review-name">이*진 보호자</span>
+                        </div>
+                    </article>
+
+                    <article class="review-card">
+                        <h3>간식 기호성이 좋아서 재구매했어요.</h3>
+                        <p>
+                            평소 입 짧은 아이인데도 잘 먹어서 다시 주문할 예정입니다.
+                            패키지도 차분해서 선물용으로도 괜찮았어요.
+                        </p>
+                        <div class="review-meta">
+                            <span class="review-category">간식</span>
+                            <span class="review-name">박*현 보호자</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="promo section">
+            <div class="inner promo-inner">
+                <div class="promo-copy">
+                    <p class="promo-eyebrow">OFFLINE SHOP</p>
+                    <h2>MUM Living Showroom</h2>
+                    <p>직접 만져보고 경험할 수 있는 감성적인 오프라인 셀렉트 공간</p>
+                    <dl class="promo-meta">
+                        <div>
+                            <dt>운영시간</dt>
+                            <dd>평일 09:00 - 18:00</dd>
+                        </div>
+                        <div>
+                            <dt>주소</dt>
+                            <dd>인천 연수구 송도동 멍냥대로123</dd>
+                        </div>
+                    </dl>
+                    <a href="#" class="btn btn-dark">VIEW MORE</a>
+                </div>
+
+                <div class="promo-image">
+                    <img src="img/final.jpg" alt="이미지">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="inner footer-top">
+            <div class="footer-brand">
+                <p class="brand-subtitle">Pet & Living</p>
+                <h2>MUM Living Shop</h2>
+                <ul class="footer-links">
+                    <li><a href="#">서비스</a></li>
+                    <li><a href="#">이용안내</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이용약관</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-info-group">
+                <div class="footer-info">
+                    <h3>고객센터</h3>
+                    <p>010-1234-5678</p>
+                    <p>월-금 09:00 - 18:00</p>
+                    <p>MUM@winiliving.com</p>
+                </div>
+
+                <div class="footer-info">
+                    <h3>계좌정보</h3>
+                    <p>국민은행 1002-123-456789</p>
+                    <p>예금주 위니리빙</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="inner footer-bottom">
+            <p>Copyright © MUM Living Shop. All Rights Reserved.</p>
+            <div class="footer-sns">
+                <a href="#" aria-label="인스타그램">Instagram</a>
+                <a href="#" aria-label="페이스북">Facebook</a>
+                <a href="#" aria-label="블로그">Blog</a>
+            </div>
+        </div>
+    </footer>
+
+    <aside class="quick-menu">
+        <a href="#main" class="quick-btn">
+            <img src="./img/top.png" alt="TOP">
+        </a>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
